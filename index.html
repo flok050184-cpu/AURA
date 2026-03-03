@@ -1,76 +1,78 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AURA Luxus-Lufterfrischer</title>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
+    <title>AURA</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Playfair Display', serif;
             margin: 0;
             padding: 0;
         }
         header {
-            background-color: #ffcc00;
+            background-color: #fff;
+            border-bottom: 2px solid gold;
             padding: 20px;
-            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        h1 {
-            margin: 0;
-            font-size: 2.5em;
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
         }
-        .features, .pricing {
-            padding: 20px;
-            text-align: center;
-        }
-        .feature {
-            margin: 20px;
-            display: inline-block;
-            width: 30%;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            padding: 20px;
-            border-radius: 8px;
-        }
-        .price {
-            font-size: 1.5em;
-            color: #ff6600;
-        }
-        footer {
-            background-color: #333;
+        .hero {
+            background: url('hero-banner.jpg') no-repeat center center;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: white;
             text-align: center;
-            padding: 10px;
+            font-size: 2rem;
+            animation: fadeIn 1.5s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        section {
+            padding: 30px;
+            text-align: center;
+        }
+        .features, .scents {
+            background-color: #f9f9f9;
+            padding: 50px 20px;
+        }
+        .accent {
+            color: gold;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>AURA Luxus-Lufterfrischer</h1>
+        <h1>AURA</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#scents">Scents</a></li>
+            </ul>
+        </nav>
     </header>
+    <div class="hero">
+        <h2>Welcome to AURA</h2>
+    </div>
     <section class="features">
-        <h2>Eigenschaften</h2>
-        <div class="feature">
-            <h3>Langanhaltender Duft</h3>
-            <p>Der AURA Lufterfrischer bietet einen angenehm langanhaltenden Duft für Ihr Auto.</p>
-        </div>
-        <div class="feature">
-            <h3>Umweltfreundlich</h3>
-            <p>Unsere Produkte sind umweltfreundlich und biologisch abbaubar.</p>
-        </div>
-        <div class="feature">
-            <h3>Verschiedene Duftnoten</h3>
-            <p>Wählen Sie aus einer Vielzahl von unverwechselbaren Düften.</p>
-        </div>
+        <h3 class="accent">Features</h3>
+        <!-- Features Content Here -->
     </section>
-    <section class="pricing">
-        <h2>Preise</h2>
-        <div class="price">
-            <p>Einzelpreis: 9,99 €</p>
-            <p>3er Pack: 24,99 €</p>
-        </div>
+    <section class="scents">
+        <h3 class="accent">Scents</h3>
+        <!-- Scents Content Here -->
     </section>
-    <footer>
-        <p>&copy; 2026 AURA. Alle Rechte vorbehalten.</p>
-    </footer>
 </body>
 </html>
